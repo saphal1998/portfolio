@@ -306,3 +306,40 @@ footer [class*="fa-"] {
     justify-content: flex-end;
   }
 }
+
+nav button {
+  border: none;
+  background-color: transparent;
+}
+
+dialog {
+  height: 60vh;
+  width: 60vw;
+  border-radius: 10px;
+  background-color: var(--black);
+}
+
+dialog::backdrop {
+  background-color: rgba(0, 0, 0, 0.6);
+}
+
+.overflow-hidden {
+  overflow: hidden;
+}
+
+#close-game {
+  position: absolute;
+  border: none;
+  top: 5%;
+  right: 2%;
+  padding: 0.5rem;
+  border-radius: 10px;
+  background-color: var(--hotmag);
+  color: white
+}
+
+#game {
+  background-color: var(--black);
+  padding: 2rem;
+  color: var(--white)
+}
