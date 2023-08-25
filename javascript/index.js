@@ -1,6 +1,5 @@
-const gameDialog = document.getElementsByTagName("dialog")[0]
 
-window.addEventListener("load", handleLoad)
+window.addEventListener("DOMContentLoaded", handleLoad)
 function handleLoad() {
     const navBar = document.querySelector("nav")
     const navList = navBar.querySelector("ul")
@@ -25,11 +24,13 @@ function handleLoad() {
     playListElement.appendChild(screenReader)
     navList.appendChild(playListElement)
 
+    const gameDialog = document.getElementsByTagName("dialog")[0]
     gameDialog.addEventListener("click", lightDismiss)
     gameDialog.showModal()
 }
 
 function handleGameDialog() {
+    const gameDialog = document.getElementsByTagName("dialog")[0]
     if (!gameDialog.open) {
         gameDialog.showModal()
         document.querySelector("body").classList.add("overflow-hidden");
@@ -37,6 +38,7 @@ function handleGameDialog() {
 }
 
 function handleCloseGameDialog() {
+    const gameDialog = document.getElementsByTagName("dialog")[0]
     if (gameDialog.open) {
         gameDialog.close("Closed the game")
         document.querySelector("body").classList.remove("overflow-hidden");
